@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" style="margin-left: 64px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generateProject</title>
+</head>
+
+<body id="hello" style="background-color: black; color: white;">
+
+    <script src="processStuff.js"></script>
+
+    <h1 >Generate Portfolio Project Array Item</h1>
+
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+
+        <!-- text -->
+        <div style="display: flex; flex-direction: column; flex-shrink: 1; row-gap: 16px; width: 150px;">
+            <h3 style="margin-bottom: -8px;">Text stuff</h3>
+
+            <input type="text" class="input" id="kat" placeholder="kat">
+            <input type="text" class="input" id="title" placeholder="title">
+
+            <textarea class="input" id="description" rows="2" cols="15" placeholder="description"></textarea>
+            <input type="text" class="input" id="showDescription" placeholder="showDescription">
+
+            <input type="text" class="input" id="year" placeholder="year">
+
+            <input type="text" class="input" id="mobileHighlights" placeholder="mobileHighlights">
+            <input type="text" class="input" id="navbarColor" placeholder="navbarColor">
+        </div>
+
+        <!-- numbers -->
+        <div style="display: flex; flex-direction: column; flex-shrink: 1; row-gap: 16px;  width: 150px;">
+            <h3 style="margin-bottom: -8px;">Numbers</h3>
+
+            <input type="text" class="input" id="numberOfHighlights" placeholder="numberOfHighlights">
+
+            <!-- tags -->
+            <div style="display: flex; flex-direction: column;">
+
+                <div style="display: flex; align-items: center;">
+
+                    <button onclick="addTag()" style="width: fit-content;">+</button>
+
+                    <p style="margin-left: 8px;">Tags</p>
+                </div>
+
+                <div id="tags" style="display: flex; flex-direction: column; gap: 8px;"></div>
+
+            </div>
+
+            <!-- links -->
+            <div style="display: flex; flex-direction: column;">
+            
+                <div style="display: flex; align-items: center;">
+            
+                    <button onclick="addLink()" style="width: fit-content;">+</button>
+            
+                    <p style="margin-left: 8px;">Links</p>
+                </div>
+            
+                <div id="links" style="display: flex; flex-direction: column; gap: 8px;"></div>
+            
+            </div>
+
+        </div>
+
+        <!-- all -->
+        <div style="display: flex; flex-direction: column; flex-shrink: 1; row-gap: 16px; width: 500px;">
+            <h3 style="margin-bottom: -8px;">All</h3>
+
+            <textarea class="input" id="all" rows="10" cols="50" placeholder="all"></textarea>
+        </div>
+
+    </div>
+
+    <button onclick="processInput()" style="margin-top: 48px; padding: 8px 16px;">
+        <h3 style="margin: 0;">Process</h3>
+    </button>
+
+    <div style="border: black; border-width: 2px; border-style: solid; margin-top: 64px;">
+        <pre style="margin: 0;" id="output">output here</pre>
+    </div>
+
+
+</body>
+
+
+</html>
